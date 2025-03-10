@@ -13,7 +13,12 @@ jobs:
       - name: Checkout Repo
         uses: actions/checkout@v4
       
-      - name: List all files
+      - name: List all files and change work directory
+        run: ls
+      
+        working-directory: ./terraform
+      
+      - name: Check workdir
         run: ls
       
       # - name: Configure AWS Credentials
