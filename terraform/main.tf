@@ -50,6 +50,7 @@ resource "aws_s3_object" "error_html" {
   key          = "error.html"
   source       = "./website/error.html"
   content_type = "text/html"
+  
 }
 
 resource "aws_s3_bucket_policy" "web" {
