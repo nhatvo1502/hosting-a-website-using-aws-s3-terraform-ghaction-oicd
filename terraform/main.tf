@@ -41,14 +41,14 @@ resource "aws_s3_bucket_website_configuration" "web" {
 resource "aws_s3_object" "index_html" {
   bucket       = aws_s3_bucket.web.id
   key          = "index.html"
-  source       = "./website/index.html"
+  source       = "../website/index.html"
   content_type = "text/html"
 }
 
 resource "aws_s3_object" "error_html" {
   bucket       = aws_s3_bucket.web.id
   key          = "error.html"
-  source       = "./website/error.html"
+  source       = "../website/error.html"
   content_type = "text/html"
   
 }
