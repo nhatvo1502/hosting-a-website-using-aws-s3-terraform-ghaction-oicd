@@ -4,6 +4,11 @@ variable "aws_region" {
 }
 
 variable "bucket_name" {
-  default = "static-web-9999999999111199999999"
+  default = "static-web-031025-html-bucket"
   type    = string
+}
+
+variable "tfstate_bucket_name" {
+  default = "static-web-031025-terraform-state-bucket"
+  type = string
 }

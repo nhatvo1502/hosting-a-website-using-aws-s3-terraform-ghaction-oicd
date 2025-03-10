@@ -1,4 +1,7 @@
-terraform/.terraform
-terraform/.terraform.lock.hcl
-terraform/terraform.tfstate
-terraform/terraform.tfstate.backup
+terraform/*
+# Exclude
+!main.tf
+!output.tf
+!variables.tf
+!backend.tf
+!backend_resource.tf
