@@ -28,23 +28,26 @@ jobs:
       - name: Change work directory
         run: cd ./terraform
       
-      - name: Install Terraform
-        uses: hashicorp/setup-terraform@v3
+      - name: Check work directory
+        run: ls
+      
+      # - name: Install Terraform
+      #   uses: hashicorp/setup-terraform@v3
 
       
-      - name: Terraform fmt
-        run: terraform fmt -check
-        continue-on-error: true
+      # - name: Terraform fmt
+      #   run: terraform fmt -check
+      #   continue-on-error: true
 
-      - name: Terraform Init
-        run: terraform init -input=false
+      # - name: Terraform Init
+      #   run: terraform init -input=false
 
-      - name: Terraform Validate
-        run: terraform validate -no-color
+      # - name: Terraform Validate
+      #   run: terraform validate -no-color
 
-      - name: Terraform Plan
-        run: terraform plan
-        continue-on-error: true
+      # - name: Terraform Plan
+      #   run: terraform plan
+      #   continue-on-error: true
 
-      - name: Terraform Apply
-        run: terraform apply --auto-approve
+      # - name: Terraform Apply
+      #   run: terraform apply --auto-approve
