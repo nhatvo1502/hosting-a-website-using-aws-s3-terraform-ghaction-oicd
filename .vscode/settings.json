@@ -1,0 +1,5 @@
+{
+	"yaml.schemas": {
+		"https://json.schemastore.org/github-workflow.json": "file:///d%3A/Users/NhatVo/PROJECTS/hosting-a-website-using-aws-s3-terraform-ghaction-oicd/.github/workflows/action.yml"
+	}
+}
