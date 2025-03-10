@@ -50,8 +50,7 @@ jobs:
 
       - name: Terraform Apply
         run: terraform apply --auto-approve
-        continue-on-error: true
       
-      - name: Terraform Destroy upon Terrafmr Apply's Failure
+      - name: Terraform Destroy upon Terraform Apply's Failure
         if: failure()
         run: terraform destroy --auto-approve
