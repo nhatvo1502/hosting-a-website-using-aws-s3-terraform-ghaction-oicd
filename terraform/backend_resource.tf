@@ -7,7 +7,7 @@ resource "aws_s3_bucket" "tfstate" {
 	}
 }
 
-resource "aws_s3_bucket_ownership_controls" "web" {
+resource "aws_s3_bucket_ownership_controls" "tfstate" {
   bucket = aws_s3_bucket.tfstate.id
 
   rule {
