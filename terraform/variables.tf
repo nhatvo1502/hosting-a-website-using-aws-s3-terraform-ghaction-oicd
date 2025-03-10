@@ -10,5 +10,5 @@ variable "bucket_name" {
 
 variable "tfstate_bucket_name" {
   default = "static-web-031025-terraform-state-bucket"
-  type = string
+  type    = string
 }
