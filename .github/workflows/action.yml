@@ -26,7 +26,7 @@ jobs:
           echo "region=${AWS_DEFAULT_REGION}" >> ~/.aws/credentials
           
       - name: Change work directory
-        run: cd ./terraform
+        run: cd terraform
       
       - name: Check work directory
         run: ls
