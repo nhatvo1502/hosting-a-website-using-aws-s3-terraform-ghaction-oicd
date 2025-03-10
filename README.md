@@ -1,1 +1,1 @@
-fix github credential 
+Getting familiar with AWS OICD by hosting a simple website using AWS S3, Github Action and Terraform
