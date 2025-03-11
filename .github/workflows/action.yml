@@ -30,6 +30,9 @@ jobs:
 
       - name: Create tfstate bucket
         run: aws s3 mb s3://static-web-031025-terraform-state-bucket
+      
+      - name: Test AWS OICD
+        run: aws s3 ls
 
       - name: Install Terraform
         uses: hashicorp/setup-terraform@v3
