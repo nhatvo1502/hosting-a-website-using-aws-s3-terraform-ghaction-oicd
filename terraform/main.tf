@@ -39,6 +39,7 @@ resource "aws_s3_bucket_website_configuration" "web" {
 }
 
 resource "aws_s3_object" "index_html" {
+  depends_on   = [aws_s3_bucket_policy.web]
   bucket       = aws_s3_bucket.web.id
   key          = "index.html"
   source       = "../website/index.html"
@@ -46,6 +47,7 @@ resource "aws_s3_object" "index_html" {
 }
 
 resource "aws_s3_object" "error_html" {
+  depends_on   = [aws_s3_bucket_policy.web]
   bucket       = aws_s3_bucket.web.id
   key          = "error.html"
   source       = "../website/error.html"
