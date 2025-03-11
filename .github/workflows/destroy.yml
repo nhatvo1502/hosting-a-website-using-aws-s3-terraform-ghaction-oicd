@@ -1,9 +1,6 @@
-name: Hosting index.html on AWS S3
+name: Destroy gaawwh
 
 on:
-  push:
-    branches:
-      - main
   workflow_dispatch:
 
 permissions:
