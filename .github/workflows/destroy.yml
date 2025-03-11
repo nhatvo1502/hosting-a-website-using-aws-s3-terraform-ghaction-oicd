@@ -39,9 +39,9 @@ jobs:
       - name: Terraform Validate
         run: terraform validate -no-color
 
-      # - name: Terraform Plan
-      #   run: terraform plan
-      #   continue-on-error: true
+      - name: Terraform Plan
+        run: terraform plan
+        continue-on-error: true
       
       - name: Terraform Destroy upon Terraform Apply's Failure
         run: terraform destroy --auto-approve
@@ -50,4 +50,4 @@ jobs:
         run: aws s3 rm s3://static-web-031025-terraform-state-bucket --recursive
       
       - name: Delete tfstate_bucket
-        run: aws s3 rb s3://static-web-031025-terraform-state-bucket --force flag
+        run: aws s3 rb s3://static-web-031025-terraform-state-bucket --force
