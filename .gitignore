@@ -4,4 +4,3 @@ terraform/*
 !output.tf
 !variables.tf
 !backend.tf
-!backend_resource.tf

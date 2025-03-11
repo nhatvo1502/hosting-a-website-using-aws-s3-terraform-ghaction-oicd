@@ -31,6 +31,7 @@ jobs:
       - name: Install Terraform
         uses: hashicorp/setup-terraform@v3
 
+      
       - name: Terraform fmt
         run: terraform fmt -check
         continue-on-error: true
@@ -41,16 +42,15 @@ jobs:
       - name: Terraform Validate
         run: terraform validate -no-color
 
-      - name: Terraform Plan
-        run: terraform plan
-        continue-on-error: false
-
-      - name: Create tfstate bucket
-        run: aws s3 mb s3://static-web-031025-terraform-state-bucket
-
-      - name: Terraform Apply
-        run: terraform apply --auto-approve
+      # - name: Terraform Plan
+      #   run: terraform plan
+      #   continue-on-error: true
       
       - name: Terraform Destroy upon Terraform Apply's Failure
-        if: failure()
         run: terraform destroy --auto-approve
+      
+      - name: Empty tfstate_bucket
+        run: aws s3 rm s3://static-web-031025-terraform-state-bucket --recursive
+      
+      - name: Delete tfstate_bucket
+        run: aws s3 rb s3://static-web-031025-terraform-state-bucket --force flag
